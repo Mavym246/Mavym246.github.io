@@ -1,0 +1,58 @@
+/* custom.css */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu li {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.479);
+    display: inline-block;
+    position: relative;
+  }
+  
+  .navbar-menu li a img {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(88, 88, 88);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+  
+  .navbar-menu li a:hover::after,
+  .navbar-menu li.item.-active a::after {
+    transform: scaleX(1);
+  }
+  
+  /* Styly pro logo */
+  .navbar-menu li.logo {
+    margin-right: 20px;
+    padding: 0;
+    display: inline-block; /* Změna na inline-block */
+  }
+  
+  .navbar-menu li.logo a {
+    display: inline-block;
+  }
+  
+  /* Zabránění efektu hover pro logo */
+  .navbar-menu li.logo a:hover::after {
+    transform: scaleX(0); /* Efekt se neprojeví na logu při hoveru */
+  }
+  
